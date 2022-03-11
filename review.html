@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+</head>
+<style>
+    /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 500px;
+}
+/* Add some content at the bottom of the video/page */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  position: fixed;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #f8b600;
+  cursor: pointer;
+}
+
+
+</style>
+  <body>
+    <header id="header">
+        <div class="header-top ">
+            <div class="container header-social">
+                <div class="row align-item-center">
+                    <div class="col-lg-6 col-sm-6 col-6 header-top-left">
+                        <ul class="list-unstyled d-flex">
+                            <li><a href="#">Visit Us</a></li>
+                            <li><a href="#">Buy Ticket</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-6 header-top-right">
+                        <div class="header-social">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-dribbble"></i></a>
+                            <a href=""><i class="fa fa-behance"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-mode-dark container menu navbar-light">
+            <button class="navbar-toggler  ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
+            <div class="collapse navbar-collapse  ml-auto" id="navbarNavDropdown">
+                <div id="logo">
+                    <a href="">
+                        <img src="logo.png" alt="">
+                    </a>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">insurence</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item nav-item-dropdown" href="#">Level 2
+                                <i class="fa fa-arrow-right"></i>
+                                <div class="has-children">
+                                    <div class="content-sub-menu">Item one</div>
+                                    <div class="content-sub-menu">Item two</div>
+                                    <!-- <div class="content-sub-menu">
+                                        <div class="has-children-lv2">
+                                            <div class="content-sub-menu">Item one</div>
+                                            <div class="content-sub-menu">Item two</div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                        <div class="has-children">
+                            <div class="content-sub-menu">Elements</div>
+                            <div class="content-sub-menu">Level 2
+                                <i class="fa fa-arrow-right"></i>
+                                <div class="has-children-lv2">
+                                    <div class="content-sub-menu">Item one</div>
+                                    <div class="content-sub-menu">Item two</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <video autoplay muted loop id="myVideo">
+            <source src="video/binhthuan.mp4" type="video/mp4">
+          </video>
+          
+          <!-- Optional: some overlay text to describe the video -->
+          <div class="content">
+
+            <!-- Use a button to pause/play the video with JavaScript -->
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+          </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" />
+   <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+
+
+</body>
+</html>
